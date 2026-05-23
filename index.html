@@ -432,6 +432,11 @@ section{
   margin-bottom: 44px;
 }
 .hero-ctas{ display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-cta-primary, .hero-cta-secondary{
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.hero-cta-primary{ font-weight: 500; }
 
 /* Foto Hero */
 .hero-portrait{
@@ -1524,6 +1529,28 @@ section{
   color: var(--text-soft);
   opacity: 0.7;
 }
+.footer-credit{
+  max-width: var(--container);
+  margin: 28px auto 0;
+  text-align: center;
+  font-family: var(--f-sans);
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  opacity: 0.42;
+  transition: opacity 0.4s ease;
+}
+.footer-credit:hover{ opacity: 0.85; }
+.footer-credit a{
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.footer-credit a:hover{ border-bottom-color: var(--gold); }
+.footer-credit .dot{ margin: 0 8px; opacity: 0.55; }
 
 /* ════════════════════════════════════════════════════
    FADE-IN ANIMATION
@@ -1555,8 +1582,13 @@ section{
   .nav-link--right{ display: none; }
   .nav-links .nav-mobile-only{ display: list-item; }
 
-  .hero-inner{ grid-template-columns: 1fr; }
-  .hero-portrait{ display: none; }
+  .hero-inner{ grid-template-columns: 1fr; gap: 40px; }
+  .hero-portrait{
+    order: -1;
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
 
   .sobre-grid{ grid-template-columns: 1fr; max-width: 640px; margin: 0 auto; }
   .sobre-photo{ max-width: 380px; }
@@ -1614,7 +1646,7 @@ section{
     </a>
     <div class="nav-right">
       <a href="#contato" class="nav-link nav-link--right">Contato</a>
-      <a href="https://wa.me/message/MISTVPUOAW3ZG1" target="_blank" rel="noopener" class="btn btn--solid nav-cta" style="height: 35px; width: 240px">
+      <a href="https://wa.me/5511968568008" target="_blank" rel="noopener" class="btn btn--solid nav-cta" style="height: 35px; width: 240px">
         <span>AGENDAR CONSULTA</span>
       </a>
     </div>
@@ -1635,14 +1667,14 @@ section{
       <h1 class="reveal reveal-delay-1">Transformação que começa <em>antes</em> da cirurgia.</h1>
       <p class="hero-sub reveal reveal-delay-2">Mais de uma década dedicada a redefinir o cuidado em obesidade — com profundidade clínica, ciência e presença humana.</p>
       <div class="hero-ctas reveal reveal-delay-3">
-        <a href="#contato" class="btn btn--solid btn--lg" style="width: 401.656px; font-weight: 500"><span>CONSULTA PREMIUM</span></a>
-        <a href="#linhas" class="btn btn--lg" style="width: 401.641px"><span>LINHAS DE CUIDADO</span></a>
+        <a href="#contato" class="btn btn--solid btn--lg hero-cta-primary"><span>CONSULTA PREMIUM</span></a>
+        <a href="#linhas" class="btn btn--lg hero-cta-secondary"><span>LINHAS DE CUIDADO</span></a>
       </div>
     </div>
-    <div class="hero-portrait corners reveal reveal-delay-2" style="width: 600px; height: 720.75px">
+    <div class="hero-portrait corners reveal reveal-delay-2">
       <span class="c-tr"></span><span class="c-bl"></span>
       <div class="hero-portrait-inner">
-        <img src="assets/dr-luciano-hero.png" alt="Dr. Luciano Machado" loading="eager" style="width: 450px" />
+        <img src="assets/dr-luciano-hero.png" alt="Dr. Luciano Machado" loading="eager" />
       </div>
     </div>
   </div>
@@ -1979,7 +2011,7 @@ section{
     <div class="linha-footer reveal">
       <div class="divider"><span></span></div>
       <p>Indicação clínica e valores apresentados exclusivamente em avaliação personalizada.</p>
-      <a href="https://wa.me/message/MISTVPUOAW3ZG1" target="_blank" rel="noopener" class="btn btn--solid btn--lg"><span>Agendar Avaliação Premium</span></a>
+      <a href="https://wa.me/5511968568008" target="_blank" rel="noopener" class="btn btn--solid btn--lg"><span>Agendar Avaliação Premium</span></a>
     </div>
   </div>
 </section>
@@ -2011,7 +2043,7 @@ section{
     <div class="story-block cta reveal reveal-delay-4">
       <div class="label">Vamos conversar</div>
       <p>"O que você já tentou até aqui?"</p>
-      <a href="https://wa.me/message/MISTVPUOAW3ZG1" target="_blank" rel="noopener" class="btn btn--solid btn--lg"><span>Conversar com o Dr. Luciano</span></a>
+      <a href="https://wa.me/5511968568008" target="_blank" rel="noopener" class="btn btn--solid btn--lg"><span>Conversar com o Dr. Luciano</span></a>
       <span class="story-microcopy">Atendimento exclusivo via Direct do Instagram</span>
     </div>
   </div>
@@ -2166,7 +2198,7 @@ section{
           <small>@dr.lucianomachadocirurgia</small>
         </span>
       </a>
-      <a href="https://wa.me/message/MISTVPUOAW3ZG1" target="_blank" rel="noopener" class="contato-cta">
+      <a href="https://wa.me/5511968568008" target="_blank" rel="noopener" class="contato-cta">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2z"/>
           <path d="M8 9c0 4 3 7 7 7l1.5-1.5-2-1-1 1c-1.5-.5-3-2-3.5-3.5l1-1-1-2L8.5 8c-.3.2-.5.6-.5 1z" fill="currentColor"/>
@@ -2191,6 +2223,11 @@ section{
     <h4>Dr. Luciano Machado</h4>
     <p>Cirurgia Bariátrica & Metabólica · Medicina Integrativa</p>
     <div class="footer-meta">CRM 147728/SP · © 2026 · Todos os direitos reservados</div>
+  </div>
+  <div class="footer-credit">
+    Created by <a href="https://webbiatech.com.br" target="_blank" rel="noopener">WEBBIA TECH</a>
+    <span class="dot">·</span>
+    <a href="https://webbiatech.com.br" target="_blank" rel="noopener">webbiatech.com.br</a>
   </div>
 </footer>
 
